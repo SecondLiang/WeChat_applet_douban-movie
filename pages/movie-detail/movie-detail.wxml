@@ -1,0 +1,52 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<import src='/pages/movie-rating/movie-rating'/>
+<view class='session-warp'>
+  <view class='session-header'>
+    <view class='poster-warp'>
+      <image src='{{movieDetail.poster}}'></image>
+    </view>
+  </view>
+  <view class='session-body'>
+    <view class='top-box'>
+      <view class='left-warp'>
+        <text class='title'>{{movieDetail.detail[0]}}</text>
+        <text class='genres'>{{movieDetail.detail[1]}}</text>
+        <text class='old-name'>原名: {{movieDetail.detail[2]}}</text>
+        <text class='country'>国家: {{movieDetail.detail[3]}}</text>
+      </view>
+      <view class='right-warp'>
+        <view class='con-border'>
+          <text class='collect_count'>{{movieDetail.collect_count}}</text>
+          <template is='movie-rating' data='{{rating}}'></template>
+          <text class='wish_count'>{{movieDetail.wish_count}}人</text>
+        </view>
+      </view>
+    </view>
+    <view class='bottom-box'>
+      <view class='btn-warp'>
+        <text class='wish-btn' bindtap='wishCount'>想看</text>
+        <text class='seed-btn' bindtap='collectCount'>看过</text>
+      </view>
+      <view class='summary-warp'>
+        <text class='summary-name'>简介</text>
+        <textarea animation="{{animationData}}" class="{{showText ? 'summary-show' : 'summary-hide'}}" >{{movieDetail.summary}}</textarea>
+      </view>
+      <text class='show-btn' bindtap='showSunmary'>{{showBtnName}}</text>
+    </view>
+    
+  </view>
+  <view class='session-footer'>
+    <text class='movie-person'>影人</text>
+    <view class='person-warp'>
+      <scroll-view scroll-x='true' class='scroll-list'>
+        <block wx:for='{{movieDetail.casts}}'>
+          <view class='img-warp'>
+            <image src='{{item.avatars.small}}'></image>
+            <text class='casts-name'>{{item.name}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    
+  </view>
+</view>

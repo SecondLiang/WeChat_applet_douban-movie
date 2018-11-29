@@ -1,0 +1,30 @@
+/* pages/index/index.wxss */
+@import '/pages/movie-grid/movie-grid';
+.session-page{
+  margin-top: 30rpx;
+  background-color: #fff;
+  border: 1rpx solid rgb(235, 232, 232);
+  padding-bottom: 0 20rpx 30rpx 20rpx;
+}
+.session-page .intheaters-header{
+  padding: 10rpx 30rpx;
+  display: flex;
+  font-size: 28rpx;
+}
+.session-page .intheaters-header .header-title{
+  flex: 1;
+}
+.session-page .intheaters-header .header-more{
+  color: rgb(133, 190, 133);
+}
+.session-page .intheaters-body{
+  width: 100%;
+  white-space: nowrap;
+  /* border: 1rpx solid red; */
+}
+.session-page .intheaters-body .scroll-box{
+  box-sizing: border-box;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0rpx 10rpx 20rpx 20rpx;
+}

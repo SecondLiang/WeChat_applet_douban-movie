@@ -1,0 +1,79 @@
+/* pages/search/search.wxss */
+
+.warpper {
+  width: 100%;
+  height: 100%;
+}
+
+.search-con {
+  width: 80%;
+  display: flex;
+  position: relative;
+}
+
+.search-con input {
+  flex: 1;
+  height: 100%;
+  font-size: 28rpx;
+}
+
+.search-con input ::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.search-back {
+  position: absolute;
+  top: 0;
+  right: -80rpx;
+  height: 100%;
+  line-height: 60rpx;
+  font-size: 36rpx;
+}
+
+.search-list {
+  width: 100%;
+}
+
+.search-list .li-warp {
+  width: 93%;
+  height: 170rpx;
+  margin: 0 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  position:relative;
+}
+
+.search-list .li-warp .img-warp {
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  height: 150rpx;
+  width: 130rpx;
+}
+
+.search-list .li-warp .img-warp image {
+  height: 100%;
+  width: 100%;
+}
+.search-list .li-warp .info-warp{
+  position: absolute;
+  top: 10rpx;
+  right: 0;
+  width: 78%;
+  height:150rpx;
+}
+.search-list .li-warp .info-warp .title,
+.search-list .li-warp .info-warp .desc{
+  display: inline-block;
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #888;
+  overflow: hidden;
+}
+.search-list .li-warp .info-warp .title{
+  font-size: 32rpx;
+  color: #000;
+  font-weight: bold;
+  margin: 30rpx 0 10rpx 0;
+}

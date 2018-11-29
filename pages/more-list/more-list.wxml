@@ -1,0 +1,24 @@
+<!--pages/more-list/more-list.wxml-->
+<import src='/pages/movie-rating/movie-rating'/>
+<template name='more-list'>
+  <view class='more-list-warp' bindtap='bindMovieDetail' data-id='{{id}}'>
+    <view class='img-warp'>
+      <image src='{{image}}'></image>
+    </view>
+    <view class='info-warp'>
+      <text class='title'>电影: {{title}}</text>
+      <text class='direc'>导演: {{direc}}</text>
+      <text class='casts'>主演: {{casts}}</text>
+      <text class='genres'>类型: {{genres}}</text>
+      <template is='movie-rating' data='{{rating}}'></template>
+      <text class='wishLook'>{{wishLook}}人想看</text>
+      <block wx:if="{{typeID == 'intheaters'}}">
+        <text class='ticket' catchtap='ticketPrompt'>购票</text>
+      </block>
+      <block wx:if="{{typeID == 'comingSoon'}}">
+        <text class='wishBtn' catchtap='wishPrompt'>想看</text>
+      </block>
+
+    </view>
+  </view>
+</template>

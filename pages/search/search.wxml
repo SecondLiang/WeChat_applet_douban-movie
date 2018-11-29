@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<view class='warpper'>
+  <view class='search-warp'>
+    <view class='search-con' bindtap='bindSearch'>
+      <icon class='search-fangdajing' type='search' size='16' color='#ccc'></icon>
+      <input type='text' placeholder='搜索电影' bindinput='searchList'></input>
+      <text class='search-back' bindtap='searchBack'>取消</text>
+    </view>
+  </view>
+  <view class='search-list'>
+    <block wx:for="{{ resultLists}}">
+      <view class='li-warp' bindtap='movie-deail' data-id='{{item.id}}'>
+        <view class='img-warp'>
+          <image src='{{item.images}}'></image>
+        </view>
+        <view class='info-warp'>
+          <text class='title'>{{item.movieName}}</text>
+          <text class='desc'>{{item.desc}}</text>
+        </view>
+      </view>
+    </block>
+
+
+
+
+  </view>
+</view>

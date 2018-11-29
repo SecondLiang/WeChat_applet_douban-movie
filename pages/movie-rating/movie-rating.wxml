@@ -1,0 +1,11 @@
+<!--pages/movie-rating/movie-rating.wxml-->
+
+<template name='movie-rating'>
+  <view class='movie-rating-warp'>
+    <view class='movie-rating'>
+      <text class='rating-box allstar{{rating.average || 0}}'></text>
+      <text class='rating-score'>{{rating.average}}</text>
+    </view>
+  </view>
+  
+</template>

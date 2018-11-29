@@ -1,0 +1,25 @@
+<import src='/pages/more-list/more-list'/>
+<view class='session-warp'>
+  <view class='session-header'>
+    <text class="tab-name {{showIntheater ? 'btn-selected' : 'btn-normal'}}" bindtap='tabTo' data-tab-id='intheaters'>正在热映</text>
+    <text class="tab-name {{showComingsoon ? 'btn-selected' : 'btn-normal'}}" bindtap='tabTo' data-tab-id='comingSoon'>即将上映</text>
+  </view>
+  <view class='movie-list'>
+   <block wx:if='{{showIntheater}}'>
+    <scroll-view scroll-y='true' class='scroll-list' bindscrolltolower="scrollMore">
+      <block wx:for='{{intheaters.movies}}'>
+        <template is='more-list' data='{{...item}}'></template> 
+      </block>
+    </scroll-view>
+   </block>
+
+   <block wx:if='{{showComingsoon}}'>
+    <scroll-view scroll-y class='scroll-list' bindscrolltolower='scrollMore'>
+      <block wx:for='{{comingSoon.movies}}'>
+        <template is='more-list' data='{{...item}}'></template> 
+      </block>
+    </scroll-view>
+   </block>
+
+  </view>
+</view>

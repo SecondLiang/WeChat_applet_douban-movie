@@ -1,0 +1,36 @@
+/* pages/movie-more/movie-more.wxss */
+@import '/pages/more-list/more-list';
+.session-warp{
+  width: 100%;
+  background-color: #fff;
+}
+.session-warp .session-header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  z-index: 10;
+  background-color: #fff;
+}
+.tab-name{
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ccc;
+  width: 50%;
+  height: 100%;
+  line-height: 80rpx;
+  text-align: center;
+}
+.btn-selected{
+  color: lightgreen;
+  border-bottom: 4rpx solid lightgreen;
+}
+.movie-list{
+  margin-top: 80rpx;
+  background-color: #fff;
+}
+.scroll-list{
+  height: 100vh;
+}

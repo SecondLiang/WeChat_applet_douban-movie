@@ -1,0 +1,31 @@
+/**app.wxss**/
+.warpper{
+  width: 100%;
+  height: 100%;
+  font-size: 32rpx;
+  background: #fff;
+}
+.search-warp{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.search-warp .search-con{
+  height: 60rpx;
+  margin: 0 40rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  position: relative;
+}
+.search-warp .search-con .search-fangdajing{
+  height: 100%;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+.search-warp .search-con .search-info{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  line-height: 60rpx;
+  color: #ccc;
+  font-size:28rpx;
+}
